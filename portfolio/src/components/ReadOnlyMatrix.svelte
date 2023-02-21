@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Matrix } from "../../../LinAlgTools/LinAlgTools";
+  import { Matrix, CustomMath } from "../../../LinAlgTools/LinAlgTools";
   export let matrix = new Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]]);
   $: matrixRep = matrix.getData();
 </script>
@@ -46,7 +46,7 @@
     {#each matrixRep as row}
       <div id="row">
         {#each row as elem}
-          <div id="elem">{Math.round(elem * 100) / 100}</div>
+          <div id="elem">{CustomMath.round(elem, 2)}</div>
         {/each}
       </div>
     {/each}

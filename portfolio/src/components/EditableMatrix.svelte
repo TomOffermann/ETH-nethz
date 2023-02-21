@@ -1,16 +1,15 @@
 <script lang="ts">
-  import { Matrix } from "../../../LinAlgTools/LinAlgTools";
-  export let matrix = new Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]]);
+  import type { Matrix } from "../../../LinAlgTools/LinAlgTools";
+  export let matrix:Matrix;
 
-  const matrixRep = matrix.getData();
-  let stringRep:string[][] = new Array(matrix.n).fill(0);
-  stringRep = stringRep.map(e => new Array(matrix.m).fill("0"));
+  export let stringRep:string[][];
 
   const changeValue = (e:string, r:number, c:number) => {
     stringRep[r][c] = e;
-    matrixRep[r][c] = isNaN(parseFloat(e)) ? 0 : parseFloat(e);
+    matrix.getData()[r][c] = isNaN(parseFloat(e)) ? 0 : parseFloat(e);
     matrix = matrix;
   }
+
 </script>
 
 <style>
@@ -53,7 +52,7 @@
     {#each stringRep as row, rowIndex}
       <div id="row">
         {#each row as elem, colIndex}
-          <input bind:value={elem} on:input={(e) => changeValue(e.currentTarget.value, rowIndex, colIndex)} id="elem"/>
+          <input value={elem} on:input={(e) => changeValue(e.currentTarget.value, rowIndex, colIndex)} id="elem"/>
         {/each}
       </div>
     {/each}

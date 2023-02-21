@@ -1,5 +1,13 @@
 // ----- MATH-LIB ----- //
 
+class CustomMath {
+  static round(number: number, precision: number) {
+    return (
+      Math.round(number * Math.pow(10, precision)) / Math.pow(10, precision)
+    );
+  }
+}
+
 class Vector {
   private data: number[];
 
@@ -425,4 +433,14 @@ class QR {
   }
 }
 
-export { Matrix, Vector, GAUSS, GRAM_SCHMIDT, QR, LEAST_SQAURES, Solution };
+export {
+  Matrix,
+  Vector,
+  GAUSS,
+  GRAM_SCHMIDT,
+  QR,
+  LEAST_SQAURES,
+  Solution,
+  ComplexNumber,
+  CustomMath,
+};

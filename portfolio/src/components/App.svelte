@@ -72,15 +72,11 @@
     #home:active {
       text-decoration: none;
     }
-    #todo {
-      color: #011474;
-      font-family: "Cascadia Code";
-    }
     #app {
       display: inline-block;
       padding: 40px;
-      border-radius: 5px;
-      border: 2px solid #011474;
+      border-radius: 12px;
+      border: 1.5px solid #011474;
       background-color: rgb(250, 248, 240);
     }
     #nav{

@@ -16,12 +16,19 @@
 </div>
 
 <h1 id="title">LinALG Tools:</h1>
+<div id="disclaimer">!!! Disclaimer: There is no guarantee that these tools work !!!</div>
 <div>• <a href="complex-numbers">Complex Numbers</a></div>
+<br>
 <div>• <a href="matrix-multiplication">Matrix Multiplication</a></div>
+<br>
 <div>• <a href="gauss">GAUSS, ref & rref</a></div>
+<br>
 <div>• <a href="sle">Solve SLE</a></div>
+<br>
 <div>• <a href="least-sqaures">Least-Squares</a></div>
+<br>
 <div>• <a href="gram-schmidt">Gram-Schmidt</a></div>
+<br>
 <div>• <a href="qr-decomposition">QR-Decomposition</a></div>
 
 <br>
@@ -39,9 +46,24 @@
 </div>
 </div>
 <style>
+  :global(
+    html,body
+  ) {
+    @import url('https://fonts.cdnfonts.com/css/cascadia-code');
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility; 
+    font-family: "Cascadia Code";
+  }
+  #disclaimer {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color:rgb(192, 33, 15);
+    text-rendering:optimizeLegibility;
+    font-weight: 400;
+  }
   a {
     color: #011474;
-    font-family: "Cascadia Code";
+    font-family: 'Cascadia Code';
   }
   #socials {
     display: flex;
@@ -52,22 +74,19 @@
   }
   #title {
     color: #010d4a;
-    font-family: "Cascadia Code";
   }
   #plug {
     color: #011474;
-    font-family: "Cascadia Code";
     font-size: 12px;
   }
   #todo {
     color: #011474;
-    font-family: "Cascadia Code";
   }
   #app {
     display: inline-block;
     padding: 40px;
-    border-radius: 5px;
-    border: 2px solid #011474;
+    border-radius: 12px;
+    border: 1.5px solid #011474;
     background-color: rgb(250, 248, 240);
   }
   #display {
@@ -84,7 +103,6 @@
     background-color:aliceblue;
 		color: grey;
     color: #011474;
-    font-family: "Cascadia Code";
 		font-size: 14px;
 	}
   #github:link {
